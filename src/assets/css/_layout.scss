@@ -1,0 +1,13 @@
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  overflow-x: hidden;
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-normal);
+}
+
+:is(h1, h2, h3, h4, h5) {
+  font-weight: var(--font-weight-bold);
+}

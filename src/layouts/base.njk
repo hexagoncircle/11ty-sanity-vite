@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ meta.lang }}">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{{ meta.title }}</title>
+		{% include "meta.njk" %}
+		<link rel="stylesheet" href="/assets/css/main.scss">
+	</head>
+
+	<body>
+		<a href="#main" class="skip-link visually-hidden">Skip to main content</a>
+
+		{% include "header.njk" %}
+
+		<main id="main" class="main">
+			{{ content | safe }}
+		</main>
+
+		{% include "footer.njk" %}
+
+		<script type="module" src="{{ '/assets/js/main.js' | url }}"></script>
+	</body>
+</html>
