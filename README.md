@@ -32,4 +32,4 @@ A list of things to check when you get started on a new project.
 
 - Update name and description `package.json`
 - Update information in `_data/meta.json`
-- Create new favicon set
+- Create new favicon assets and replace them in `/public/assets/favicon`

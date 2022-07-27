@@ -20,6 +20,7 @@
     "@11ty/eleventy-plugin-vite": "^2.0.0-canary.1",
     "autoprefixer": "^10.4.7",
     "cssnano": "^5.1.12",
+    "design-tokens-cli": "0.0.6",
     "luxon": "^3.0.1",
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.4",

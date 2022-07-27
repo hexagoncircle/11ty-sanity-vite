@@ -14,10 +14,18 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyPluginNavigation)
   eleventyConfig.addPlugin(EleventyPluginRss)
   eleventyConfig.addPlugin(EleventyPluginSyntaxhighlight)
-  eleventyConfig.addPlugin(EleventyVitePlugin)
-
-  eleventyConfig.addPassthroughCopy({
-    public: '/'
+  eleventyConfig.addPlugin(EleventyVitePlugin, {
+    tempFolderName: '.11ty-vite',
+    viteOptions: {
+      clearScreen: false,
+      server: {
+        mode: 'development',
+        middlewareMode: true
+      },
+      build: {
+        mode: 'production'
+      }
+    }
   })
 
   Object.keys(filters).forEach((filterName) => {
@@ -52,12 +60,13 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addLayoutAlias('base', 'base.njk')
   eleventyConfig.addPassthroughCopy('src/assets/css')
   eleventyConfig.addPassthroughCopy('src/assets/js')
+
   eleventyConfig.setServerPassthroughCopyBehavior('copy')
 
   return {
-    // templateFormats: ['md', 'njk', 'html', 'liquid'],
-    // htmlTemplateEngine: 'njk',
-    // passthroughFileCopy: true,
+    templateFormats: ['md', 'njk', 'html', 'liquid'],
+    htmlTemplateEngine: 'njk',
+    passthroughFileCopy: true,
     dir: {
       input: 'src',
       layouts: 'layouts'

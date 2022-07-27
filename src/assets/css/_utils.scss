@@ -11,3 +11,7 @@
   white-space: nowrap;
   width: 1px;
 }
+
+.flow > * + * {
+  margin-top: var(--flow-space, var(--space-4));
+}
