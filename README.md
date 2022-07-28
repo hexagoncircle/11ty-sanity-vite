@@ -10,6 +10,15 @@ After cloning the repo, install all dependencies:
 npm install
 ```
 
+## Checklist
+
+A list of things to check when you get started on a new project:
+
+- Change name and description in `package.json`
+- Update information in `_data/meta.json`
+- Update `/public/site.webmanifest`
+- Create new favicon assets and replace them in `/public/assets/favicon`
+
 ## Local Environment Variables
 
 Create an `.env` file in the root directory if applicable to this project:
@@ -35,12 +44,3 @@ Trigger a production build:
 ```sh
 npm run build
 ```
-
-## Checklist
-
-A list of things to check when you get started on a new project:
-
-- Change name and description in `package.json`
-- Update information in `_data/meta.json`
-- Update `/public/site.webmanifest`
-- Create new favicon assets and replace them in `/public/assets/favicon`
