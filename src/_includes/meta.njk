@@ -12,9 +12,9 @@
 <meta property="og:description" content="{{ description  or meta.description }}">
 <meta property="og:url" content="{{ absolutePageUrl }}">
 <meta property="og:locale" content="{{ meta.locale }}">
-<meta name="twitter:card" content="{% if image -%}summary_large_image{% else %}summary{% endif %}">
-{%- if image -%}
-  <meta property="og:image" content="{{ image | url | absoluteUrl(meta.url) }}">
+<meta name="twitter:card" content="{% if meta.image -%}summary_large_image{% else %}summary{% endif %}">
+{%- if meta.image -%}
+  <meta property="og:image" content="{{ meta.image | url | absoluteUrl(meta.url) }}">
 {%- endif -%}
 
 {# Favicon #}

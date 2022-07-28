@@ -1,7 +1,7 @@
 {
   "name": "11ty-starter",
-  "version": "1.0.0",
-  "description": "An 11ty + Vite starter project",
+  "description": "11ty + Vite + Sanity project starter",
+  "version": "0.1.0",
   "scripts": {
     "start": "npx @11ty/eleventy --serve --quiet --incremental",
     "build": "npx @11ty/eleventy",
