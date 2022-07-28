@@ -18,15 +18,16 @@ A list of things to check when you get started on a new project:
 - Update information in `_data/meta.json`
 - Update `/public/site.webmanifest`
 - Create new favicon assets and replace them in `/public/assets/favicon`
+- Get started with your own Sanity instance: [sanity.io/get-started](https://www.sanity.io/get-started/)
 
 ## Local Environment Variables
 
-Create an `.env` file in the root directory if applicable to this project:
+Create an `.env` file in the root directory to add environment variables for this project:
 
 ```
-SANITY_API_TOKEN = "" // Generate API token for project
-SANITY_PROJECT_ID = "" // Set Sanity project ID
-SANITY_DATASET = "production" // Project dataset
+SANITY_API_TOKEN = ""
+SANITY_PROJECT_ID = ""
+SANITY_DATASET = "production"
 ```
 
 ## Run dev server

@@ -8,11 +8,13 @@ eleventyNavigation:
 <article class="container flow">
   <h1>Fetching data from Sanity</h1>
 
-  <p>Below is an example of fetching <em>Basic Page</em> titles from the <a href="https://marketing-cms.netlify.app/desk">marketing CMS</a> dataset.</p>
+  <p>Below is an example of fetching <em>pets</em> from a Sanity dataset created from their <a href="https://www.sanity.io/get-started/">Get Started</a> workflow.</p>
 
   <ul>
-    {% for page in basicPages %}
-      <li>{{ page.title }}</li>
+    {% for pet in pets %}
+      <li>
+        <strong>{{ pet.name }}</strong> – {{ pet.shortDescription }}
+      </li>
     {% endfor %}
   </ul>
 </article>
