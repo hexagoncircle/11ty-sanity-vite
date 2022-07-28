@@ -5,9 +5,7 @@
         {%- set isCurrent = (item.url == page.url) -%}
         {%- set isParent = item.url != '/' and item.url in page.url -%}
         <li class="item{% if isCurrent or isParent %} active{% endif %}">
-          <a class="link" href="{% if isCurrent %}#main{% else %}{{ item.url | url }}{% endif %}" {% if isCurrent %} aria-current="page" {% endif %}>
-            {{ item.title }}
-          </a>
+          <a class="link" href="{% if isCurrent %}#main{% else %}{{ item.url | url }}{% endif %}" {% if isCurrent %} aria-current="page" {% endif %}>{{ item.title }}</a>
         </li>
       {%- endif -%}
     {%- endfor -%}

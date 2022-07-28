@@ -1,0 +1,18 @@
+---
+layout: base
+eleventyNavigation:
+  key: Sanity Example
+  order: 2
+---
+
+<article class="container flow">
+  <h1>Fetching data from Sanity</h1>
+
+  <p>Below is an example of fetching <em>Basic Page</em> titles from the <a href="https://marketing-cms.netlify.app/desk">marketing CMS</a> dataset.</p>
+
+  <ul>
+    {% for page in basicPages %}
+      <li>{{ page.title }}</li>
+    {% endfor %}
+  </ul>
+</article>
