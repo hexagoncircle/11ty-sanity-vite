@@ -28,16 +28,20 @@ module.exports = function (eleventyConfig) {
     }
   })
 
-  Object.keys(filters).forEach((filterName) => {
-    eleventyConfig.addFilter(filterName, filters[filterName])
+  Object.keys(filters).forEach((filter) => {
+    eleventyConfig.addFilter(filter, filters[filter])
   })
 
-  Object.keys(transforms).forEach((transformName) => {
-    eleventyConfig.addTransform(transformName, transforms[transformName])
+  Object.keys(transforms).forEach((transform) => {
+    eleventyConfig.addTransform(transform, transforms[transform])
   })
 
-  Object.keys(shortcodes).forEach((shortcodeName) => {
-    eleventyConfig.addShortcode(shortcodeName, shortcodes[shortcodeName])
+  Object.keys(shortcodes).forEach((shortcode) => {
+    if (shortcode === 'image') {
+      eleventyConfig.addNunjucksAsyncShortcode('image', shortcodes[shortcode])
+      return
+    }
+    eleventyConfig.addShortcode(shortcode, shortcodes[shortcode])
   })
 
   eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`)
