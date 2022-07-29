@@ -1,4 +1,4 @@
-# 11ty Sanity Vite Starter
+# 11ty + Sanity + Vite Project Starter
 
 Starter template using 11ty, Vite, and Sanity. Heavily inspired by the [Eleventy Plus Vite](https://github.com/matthiasott/eleventy-plus-vite) starter project.
 
