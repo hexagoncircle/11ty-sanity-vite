@@ -13,6 +13,7 @@ eleventyNavigation:
   <ul>
     {% for pet in pets %}
       <li>
+        <img src="{{ pet.picture.asset.url }}?w=200" alt="" style="aspect-ratio: 1; max-width: 64px; object-fit: cover; border-radius: 50%"/>
         <strong>{{ pet.name }}</strong> – {{ pet.shortDescription }}
       </li>
     {% endfor %}

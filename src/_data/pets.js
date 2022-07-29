@@ -3,7 +3,10 @@ const client = require('../_sanity/client')
 module.exports = async function () {
   const query = `*[_type == "pet"] {
     name,
-    shortDescription
+    shortDescription,
+    picture {
+      asset->{ url }
+    }
   }`
   const params = {}
 
