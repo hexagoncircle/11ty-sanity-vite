@@ -24,10 +24,9 @@ body {
 }
 
 .skip-link {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: var(--space-2);
+  position: absolute;
+  inset-block-start: var(--space-2);
+  inset-inline: 0;
   margin-inline: auto;
   width: fit-content;
   text-align: center;
@@ -35,7 +34,7 @@ body {
   background-color: var(--color-background);
 }
 
-:is(h1, h2, h3) {
+:is(h1, h2, h3, h4) {
   font-weight: var(--font-weight-primary-bold);
   line-height: 1;
 }
@@ -47,5 +46,8 @@ body {
   font-size: var(--font-size-4);
 }
 :is(h3, .h3) {
+  font-size: var(--font-size-3);
+}
+:is(h4, .h4) {
   font-size: var(--font-size-3);
 }

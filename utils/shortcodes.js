@@ -10,8 +10,8 @@ module.exports = {
     sizes = '100vw'
   ) {
     let metadata = await Image(src, {
-      widths: [...widths, null],
-      formats: [...formats, null],
+      widths: [...widths],
+      formats: [...formats],
       outputDir: '_site/assets/images',
       urlPath: '/assets/images'
     })
