@@ -17,7 +17,7 @@ A list of things to check when you get started on a new project:
 - Change name and description in `package.json`
 - Update information in `_data/meta.json`
 - Update `/public/site.webmanifest`
-- Replace `/public/assets/images/site.og-image.png`
+- Replace the site's open graph image in `/public/assets/images/site.og-image.png`
 - Create new favicon assets and replace them in `/public/assets/favicon`
 - Get started with your own Sanity instance: [sanity.io/get-started](https://www.sanity.io/get-started/)
 

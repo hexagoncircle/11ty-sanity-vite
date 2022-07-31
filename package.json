@@ -23,6 +23,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
     "@11ty/eleventy-plugin-vite": "^2.0.0-canary.1",
     "@sanity/client": "^3.3.2",
+    "@sanity/image-url": "^1.0.1",
     "autoprefixer": "^10.4.7",
     "cssnano": "^5.1.12",
     "design-tokens-cli": "0.0.6",
