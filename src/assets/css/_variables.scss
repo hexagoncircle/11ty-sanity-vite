@@ -39,7 +39,6 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-mode: 'dark';
     --color-text: #{colors.$white};
     --color-background: #{colors.$black};
     --color-primary: #{colors.$white};

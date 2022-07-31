@@ -1,7 +1,12 @@
+/* Small transition to focus-visible outline */
 :focus-visible {
   transition: outline-offset 100ms ease-out;
 }
 
+/* 
+ Visually hide elements on screen 
+ @link: https://www.a11yproject.com/posts/how-to-hide-content/
+*/
 .visually-hidden:not(:focus):not(:active) {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -12,6 +17,10 @@
   width: 1px;
 }
 
+/*
+ Add vertical rhythm to child elements
+ @link: https://every-layout.dev/layouts/stack/
+*/
 .flow > * + * {
-  margin-top: var(--flow-space, var(--space-4));
+  margin-block-start: var(--flow-space, var(--space-4));
 }

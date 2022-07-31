@@ -1,9 +1,13 @@
+:root {
+  color-scheme: light dark;
+}
+
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
+  overflow-x: hidden;
   color: var(--color-text);
   background-color: var(--color-background);
-  overflow-x: hidden;
   font-family: var(--font-family-primary);
   font-weight: var(--font-weight-primary-normal);
   line-height: 1.5;
