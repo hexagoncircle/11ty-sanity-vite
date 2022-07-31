@@ -6,7 +6,6 @@ const EleventyPluginSyntaxhighlight = require('@11ty/eleventy-plugin-syntaxhighl
 const EleventyPluginRss = require('@11ty/eleventy-plugin-rss')
 const EleventyVitePlugin = require('@11ty/eleventy-plugin-vite')
 
-const imageUrl = require('./src/_sanity/imageUrl.js')
 const filters = require('./utils/filters.js')
 const transforms = require('./utils/transforms.js')
 const shortcodes = require('./utils/shortcodes.js')
@@ -43,14 +42,6 @@ module.exports = function (eleventyConfig) {
       return
     }
     eleventyConfig.addShortcode(shortcode, shortcodes[shortcode])
-  })
-
-  eleventyConfig.addShortcode('sanityImageUrl', (source, width) => {
-    if (width) {
-      return imageUrl(source).width(width).auto('format')
-    }
-
-    return imageUrl(source).auto('format')
   })
 
   eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`)

@@ -1,4 +1,5 @@
 const Image = require('@11ty/eleventy-img')
+const imageUrl = require('../src/_sanity/imageUrl.js')
 
 module.exports = {
   image: async function (
@@ -26,5 +27,12 @@ module.exports = {
 
     // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
     return Image.generateHTML(metadata, imageAttributes)
+  },
+  sanityImageUrl: function (source, width) {
+    if (width) {
+      return imageUrl(source).width(width).auto('format')
+    }
+
+    return imageUrl(source).auto('format')
   }
 }
