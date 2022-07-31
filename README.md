@@ -17,18 +17,26 @@ A list of things to check when you get started on a new project:
 - Change name and description in `package.json`
 - Update information in `_data/meta.json`
 - Update `/public/site.webmanifest`
+- Replace `/public/assets/images/site.og-image.png`
 - Create new favicon assets and replace them in `/public/assets/favicon`
 - Get started with your own Sanity instance: [sanity.io/get-started](https://www.sanity.io/get-started/)
 
-## Local Environment Variables
+## Working with Sanity
 
-Create an `.env` file in the root directory to add environment variables for this project:
+Once you have a Sanity project created, add an `.env` file in the project's root directory for environment variables.
 
 ```
 SANITY_API_TOKEN = ""
 SANITY_PROJECT_ID = ""
 SANITY_DATASET = "production"
 ```
+
+The Sanity client can be found in the `_sanity` directory. An example of fetching data can be seen in `_data/pets.js` which then gets rendered in `sanity-example.njk`.
+
+### Helpful resources
+
+- [Sanity Docs](https://www.sanity.io/docs/overview-introduction)
+- [How Queries Work – GROQ](https://www.sanity.io/docs/how-queries-work)
 
 ## Run dev server
 
@@ -40,7 +48,7 @@ npm start
 
 ## Build
 
-Trigger a production build:
+Run a production build:
 
 ```sh
 npm run build
